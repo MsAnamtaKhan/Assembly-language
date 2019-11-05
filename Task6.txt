@@ -1,0 +1,15 @@
+include irvine32.inc
+
+.data 
+caption BYTE "Survey Completed",0
+question BYTE "Thank you for completing the survey." 
+BYTE 0dh,0ah 
+BYTE "Would you like to receive the results?",0 
+.code
+main proc
+mov ebx,OFFSET caption 
+mov edx,OFFSET question 
+call MsgBoxAsk
+exit
+main ENDP
+END main
