@@ -1,0 +1,15 @@
+INCLUDE Irvine32.inc
+ .data 
+ 
+oneDword SDword 00101111100111001001001010111100b 
+oneByte SBYTE 10001001b 
+ 
+.code 
+main PROC 
+ 
+ mov eax, oneDword  ; EAX = 00101111100111001001001010111100 
+ movsx eax, oneByte  ; EAX = 11111111111111111111111110001001 
+ call ReadInt 
+ exit  
+main ENDP
+ END main
