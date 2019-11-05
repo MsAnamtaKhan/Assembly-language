@@ -1,0 +1,15 @@
+INCLUDE Irvine32.inc 
+.data 
+Upp byte "anamta khan",0
+.code 
+main PROC
+ ;call readstring  
+ mov ecx,lengthof Upp
+ mov edx,offset Upp
+ L1:
+ mov al,byte ptr [edx]
+ and al,11011111b
+ inc edx 
+ call writechar  
+ loop L1
+ call readint
