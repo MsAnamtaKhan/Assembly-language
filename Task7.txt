@@ -1,0 +1,13 @@
+include irvine32.inc
+.data
+.code
+main proc
+call  Randomize 
+mov ecx,10 
+L1: 
+call  Random32  ; use or display random value in EAX here... 
+call writeint
+loop  L1 
+exit
+main ENDP
+END main
