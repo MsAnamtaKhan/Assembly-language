@@ -1,0 +1,16 @@
+////////////////////////////PROGRAM USING XCHG INSTRUCTION//////////////////
+INCLUDE Irvine32.inc 
+.data 
+a dword 1111h 
+b dword 2222h 
+.code 
+main PROC  
+Mov Eax,a  
+Mov Ebx,b 
+ Call DumpRegs 
+ Xchg Eax,Ebx 
+ Call DumpRegs 
+ Call ReadInt  
+Exit
+ main ENDP 
+END main
